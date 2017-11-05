@@ -10,7 +10,8 @@ a very fast browser-friendly pure JavaScript msgpack coder with no dependencies.
 msgpack coder I've come across.  This is a nodejs npm package that includes all the
 original sources and exports two methods, `pack` and `unpack`.
 
-The msgpack format is described at [http://wiki.msgpack.org/display/MSGPACK/Format+specification](http://wiki.msgpack.org/display/MSGPACK/Format+specification).
+The msgpack format is described at
+[https://github.com/msgpack/msgpack/blob/master/spec.md](https://github.com/msgpack/msgpack/blob/master/spec.md).
 
 
 ## Description
