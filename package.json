@@ -5,7 +5,8 @@
   "license": "MIT",
   "main": "index.js",
   "keywords": [ ],
-  "repository": "https://github.com/msgpack/msgpack-javascript",
+  "repository": "https://github.com/andrasq/node-msgpackjs",
+  "engines": { "node": ">=0.8" },
 
   "dependencies": {
   },
