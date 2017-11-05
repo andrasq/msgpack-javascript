@@ -6,7 +6,7 @@
 This is an unmodified fork of the github [`msgpack-javascript`](https://github.com/msgpack/msgpack-javascript),
 a very fast browser-friendly pure JavaScript msgpack coder with no dependencies.
 
-`msgpack-javascript` (the github repo, not the package by that name) is the fastest
+`msgpack-javascript` (the github repo, not the npm package by that name) is the fastest
 msgpack coder I've come across.  This is a nodejs npm package that includes all the
 original sources and exports two methods, `pack` and `unpack`.
 
