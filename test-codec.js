@@ -137,6 +137,9 @@ NOTE: must also uncache msgpackjs
         },
 
         'should decode NaN from double': function(t) {
+            t.ok(isNaN(msgpackjs.unpack([203, 0x7f, 0xf8, 0, 0, 0, 0, 0, 0])));
+            t.ok(isNaN(msgpackjs.unpack([203, 0x7f, 0xff, 0, 0, 0, 0, 0, 0])));
+            t.ok(isNaN(msgpackjs.unpack([203, 0x7f, 0xff, 0x80, 0, 0, 0, 0, 0])));
             t.ok(isNaN(msgpackjs.decode([ 203, 255, 255, 255, 255, 255, 255, 255, 255 ])));
             t.ok(isNaN(msgpackjs.decode(new Buffer([ 203, 255, 255, 255, 255, 255, 255, 255, 255 ]))));
             t.done();
@@ -176,13 +179,6 @@ NOTE: must also uncache msgpackjs
         'should decode 0 from double': function(t) {
             t.strictEqual(msgpackjs.unpack([203, 0x00, 0, 0, 0, 0, 0, 0, 0]), 0.0);
             t.strictEqual(msgpackjs.unpack([203, 0x80, 0, 0, 0, 0, 0, 0, 0]), -0.0);
-            t.done();
-        },
-
-        'should decode NaN from double': function(t) {
-            t.ok(isNaN(msgpackjs.unpack([203, 0x7f, 0xf8, 0, 0, 0, 0, 0, 0])));
-            t.ok(isNaN(msgpackjs.unpack([203, 0x7f, 0xff, 0, 0, 0, 0, 0, 0])));
-            t.ok(isNaN(msgpackjs.unpack([203, 0x7f, 0xff, 0x80, 0, 0, 0, 0, 0])));
             t.done();
         },
 
