@@ -3,9 +3,15 @@
 [![Build Status](https://api.travis-ci.org/andrasq/node-msgpackjs.svg?branch=master)](https://travis-ci.org/andrasq/node-msgpackjs?branch=master)
 [![Coverage Status](https://codecov.io/github/andrasq/node-msgpackjs/coverage.svg?branch=master)](https://codecov.io/github/andrasq/node-msgpackjs?branch=master)
 
-
 This is an unmodified fork of the github [`msgpack-javascript`](https://github.com/msgpack/msgpack-javascript),
-a very fast pure JavaScript msgpack coder with no dependencies.
+a very fast browser-friendly pure JavaScript msgpack coder with no dependencies.
+
+`msgpack-javascript` (the github repo, not the package by that name) is the fastest
+msgpack coder I've come across.  This is a nodejs npm package that includes all the
+original sources and exports two methods, `pack` and `unpack`.
+
+
+## Description
 
 The goal is to republish `msgpack-javascript`, and to track the original closely.  I've
 removed the original test files and 6mb test data, but added some unit tests to spot-check
@@ -21,9 +27,11 @@ own encoding of `-Infinity` it decodes as `0`.  These are errata to be fixed.
 
 ## API
 
+Unlike other msgpack coders, this one encodes to an array of byte values, not to a Buffer.
+
 ### pack( item )
 
-Encode the item and return an array containing the encoded item.  To obtain the
+Encode the item and return an Array containing the encoded item.  To obtain the
 corresponding byte stream, make it into a Buffer:
 
     var msgpack = require('msgpackjs');
