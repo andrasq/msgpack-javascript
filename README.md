@@ -76,6 +76,13 @@ comparison, they are similar data bundles.
     JSON.parse                      1,202,556 ops/sec   2405 >>>>>>>>>>>>
 
 
+## TODO
+
+- comprehensive test of utf8 handling (the code rolls its own utf8 coder)
+- comprehensive test of `double` and `float` handling (the code rolls its own binary
+  32-bit and 64-bit floating-point read/write functions)
+
+
 ## Related Work
 
 - [`msgpack-javascript`](https://github.com/msgpack/msgpack-javascript) - the original sources to on github
