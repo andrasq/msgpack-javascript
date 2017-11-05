@@ -1,0 +1,21 @@
+{
+  "name": "msgpackjs",
+  "description": "very fast pure js msgpack coder",
+  "version": "0.9.0",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [ ],
+  "repository": "https://github.com/msgpack/msgpack-javascript",
+
+  "dependencies": {
+  },
+  "devDependencies": {
+    "qnit": "0.18",
+    "qtimeit": "0.21"
+  },
+  "scripts": {
+    "test": "qnit test-codec.js",
+    "coverage": "nyc --reporter lcov --reporter text npm test",
+    "clean": "rm -r .nyc_output coverage"
+  }
+}
