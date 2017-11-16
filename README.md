@@ -21,7 +21,7 @@ removed the original test files and 6mb test data, but added some unit tests to 
 correctness and for code coverage, and wrote this readme.  The version numbers differ to
 allow independent releases; the initial package version is `0.9.0` and is derived from
 the latest gitub `msgpack-javascript`, version 1.05 of 2015-02-16 04:04 GMT
-commit [`2cfda99`](https://github.com/andrasq/msgpack-javascript/commit/2cfda99e28b5b7599427300a88a11cfb71ec9eba).
+commit [`2cfda99`](https://github.com/msgpack/msgpack-javascript/commit/2cfda99e28b5b7599427300a88a11cfb71ec9eba).
 
 My unit tests cover the basics and omit Uint8Array, maps, huge arrays or huge objects, and
 binary data.  There are a couple of failures, `-Infinity` is decoded as `+Infinity` and its
@@ -84,6 +84,7 @@ comparison, they are similar data bundles.
 - comprehensive test of utf8 handling (the code rolls its own utf8 coder)
 - comprehensive test of `double` and `float` handling (the code rolls its own binary
   32-bit and 64-bit floating-point read/write functions)
+- map field names are hard-coded to `fixstr` ie cannot exceed 31 bytes
 
 
 ## Related Work
